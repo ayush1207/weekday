@@ -18,7 +18,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 /**
- * 
+ * Card data of Jd
  */
 const JdCard = ({ cardDetail }) => {
   const [showMore, setShowMore] = useState(false);
@@ -49,9 +49,9 @@ const JdCard = ({ cardDetail }) => {
           <button className="btn" onClick={() => setShowMore(!showMore)}>{showMore ? "Show less" : "Show more"}</button>
         </div>
       </div>
-      <div>
-        Experience : {cardDetail.minExp ? cardDetail.minExp + '-' : ''}{cardDetail.maxExp ?? cardDetail.maxExp}
-      </div>
+      {cardDetail.minExp ?<div>
+        Experience : {cardDetail.minExp ?? cardDetail.minExp}{cardDetail.maxExp ? '-'+cardDetail.maxExp : ''} years
+      </div> : ' '}
       <div>
         <p className="mt-2"><Button variant="contained" className='w-100'>Easy Apply</Button></p>
       </div>
