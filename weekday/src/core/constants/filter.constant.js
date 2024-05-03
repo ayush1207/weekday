@@ -10,10 +10,11 @@ export const Options = [
 
 
 export const Label = {
-    Role: 'Roles',
-    Employees: 'No. of Employees',
-    Experience: 'Experience',
-    Remote: 'Remote',
-    Base: 'Base Pay',
-    Name: 'Select Company Name'
+    role: 'Roles',
+    stack: 'Tech stack',
+    experience: 'Experience',
+    remote: 'Remote',
+    base: 'Base Pay',
+    name: 'Select Company Name',
+    location : 'Location'
 }

@@ -26,64 +26,74 @@ const Filter = () => {
 
   return (
     <div className='mt-2 mb-4 row'>
-      <div className='col-md-3'>
-        <label>{Label.Role}</label>
+      <div className='col-md-2'>
+        <label>{Label.role}</label>
         <Autocomplete
           disablePortal
           options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
-          renderInput={(params) => <TextField {...params} label="Select" />}
+          renderInput={(params) => <TextField {...params} label="Select Role" />}
         />
       </div>
-      <div className='col-md-3' >
-        <label>{Label.Name}</label>
+      <div className='col-md-2' >
+        <label>{Label.name}</label>
         <Autocomplete
           disablePortal
           options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
-          renderInput={(params) => <TextField {...params} label="Select" />}
-        />
-      </div>
-      <div className='col-md-2 col-6'>
-        <label>{Label.Employees}</label>
-        <Autocomplete
-          disablePortal
-          options={Options}
-          getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
-          renderInput={(params) => <TextField {...params} label="Select" />}
-        />
-      </div>
-      <div className='col-md-1 col-6'>
-        <label>{Label.Experience}</label>
-        <Autocomplete
-          disablePortal
-          options={Options}
-          getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
-          renderInput={(params) => <TextField {...params} label="Select" />}
-        />
-      </div>
-      <div className='col-md-1 col-6'>
-        <label>{Label.Remote}</label>
-        <Autocomplete
-          disablePortal
-          options={Options}
-          getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
-          renderInput={(params) => <TextField {...params} label="Select" />}
+          renderInput={(params) => <TextField {...params} label="Select Name " />}
         />
       </div>
       <div className='col-md-2 col-6'>
-        <label>{Label.Base}</label>
+        <label>{Label.stack}</label>
         <Autocomplete
           disablePortal
           options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
-          renderInput={(params) => <TextField {...params} label="Select" />}
+          renderInput={(params) => <TextField {...params} label="Select Tech Stack" />}
+        />
+      </div>
+      <div className='col-md-1 col-6'>
+        <label>{Label.experience}</label>
+        <Autocomplete
+          disablePortal
+          options={Options}
+          getOptionLabel={(option) => option}
+          onChange={(event, value) => handleSelect(value)}
+          renderInput={(params) => <TextField {...params} label="Select Exp." />}
+        />
+      </div>
+      <div className='col-md-1 col-6'>
+        <label>{Label.remote}</label>
+        <Autocomplete
+          disablePortal
+          options={Options}
+          getOptionLabel={(option) => option}
+          onChange={(event, value) => handleSelect(value)}
+          renderInput={(params) => <TextField {...params} label="Remote" />}
+        />
+      </div>
+      <div className='col-md-2 col-6'>
+        <label>{Label.base}</label>
+        <Autocomplete
+          disablePortal
+          options={Options}
+          getOptionLabel={(option) => option}
+          onChange={(event, value) => handleSelect(value)}
+          renderInput={(params) => <TextField {...params} label="Select Base pay" />}
+        />
+      </div>
+      <div className='col-md-2 col-12'>
+        <label>{Label.location}</label>
+        <Autocomplete
+          disablePortal
+          options={Options}
+          getOptionLabel={(option) => option}
+          onChange={(event, value) => handleSelect(value)}
+          renderInput={(params) => <TextField {...params} label="Select Location" />}
         />
       </div>
     </div>
