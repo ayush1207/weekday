@@ -1,30 +1,21 @@
+/**
+ * 
+ */
 import React, { useState } from 'react';
+/**
+ * css imports
+ */
 import './filter.css';
-import DropdownComp from '../dropdown/dropdown';
-
+/**
+ * material imports
+ */
 import TextField from '@mui/material/TextField';
-
 import Autocomplete from '@mui/material/Autocomplete';
+/**
+ *
+ */
+import { Label , Options } from '../../core/constants/filter.constant';
 
-
-const top100Films = [
-  'The Shawshank Redemption',
-  'The Godfather',
-  'The Godfather: Part II',
-  'The Dark Knight',
-  '12 Angry Men',
-  "Schindler's List",
-  'Pulp Fiction',
-];
-
-const Label = {
-  Role: 'Roles',
-  Employees: 'No. of Employees',
-  Experience: 'Experience',
-  Remote: 'Remote',
-  Base: 'Base Pay',
-  Name: 'Select Company Name'
-}
 
 const Filter = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -39,7 +30,7 @@ const Filter = () => {
         <label>{Label.Role}</label>
         <Autocomplete
           disablePortal
-          options={top100Films}
+          options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
           renderInput={(params) => <TextField {...params} label="Select" />}
@@ -49,7 +40,7 @@ const Filter = () => {
         <label>{Label.Name}</label>
         <Autocomplete
           disablePortal
-          options={top100Films}
+          options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
           renderInput={(params) => <TextField {...params} label="Select" />}
@@ -59,7 +50,7 @@ const Filter = () => {
         <label>{Label.Employees}</label>
         <Autocomplete
           disablePortal
-          options={top100Films}
+          options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
           renderInput={(params) => <TextField {...params} label="Select" />}
@@ -69,7 +60,7 @@ const Filter = () => {
         <label>{Label.Experience}</label>
         <Autocomplete
           disablePortal
-          options={top100Films}
+          options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
           renderInput={(params) => <TextField {...params} label="Select" />}
@@ -79,7 +70,7 @@ const Filter = () => {
         <label>{Label.Remote}</label>
         <Autocomplete
           disablePortal
-          options={top100Films}
+          options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
           renderInput={(params) => <TextField {...params} label="Select" />}
@@ -89,7 +80,7 @@ const Filter = () => {
         <label>{Label.Base}</label>
         <Autocomplete
           disablePortal
-          options={top100Films}
+          options={Options}
           getOptionLabel={(option) => option}
           onChange={(event, value) => handleSelect(value)}
           renderInput={(params) => <TextField {...params} label="Select" />}
