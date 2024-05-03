@@ -1,16 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './jd-list.module.css';
 import JdCard from '../jd-card/jd-card';
 import apiService from '../../core/service/api.service';
 
 const JdList = () => {
 
+  const [jdDetails , setJdDetails] = useState();
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const result = await apiService.callApi();
-        console.log(result);
+        setJdDetails(result.jdList);
+        console.log(result)
       } catch (error) {
         console.error(error);
       }
@@ -20,7 +23,11 @@ const JdList = () => {
 
   return (
     <div className={styles.JdList}>
-      <JdCard></JdCard>
+      {jdDetails ? 
+        (jdDetails.forEach(data => {
+          <JdCard cardDetail={data} key="{data.jdUid}"></JdCard>
+        })) : (<p>Loading</p>)
+      }
     </div>
   );
 }
