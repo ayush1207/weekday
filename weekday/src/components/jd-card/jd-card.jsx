@@ -28,7 +28,6 @@ const JdCard = ({ cardDetail }) => {
       <Container>
         <Row>
           <Col xs={12} md={4}>
-
           </Col>
           <Col xs={6} md={8} className="m-0">
             <p className="m-0 h5">{cardDetail.companyName}</p>

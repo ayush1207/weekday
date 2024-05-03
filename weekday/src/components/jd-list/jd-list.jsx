@@ -27,9 +27,7 @@ const JdList = () => {
 
   return (
     <div className={styles.JdList}>
-
-
-      <Box sx={{ flexGrow: 1 ,padding : 4 }}>
+      <Box sx={{ flexGrow: 1 ,padding : 0 }}>
         {jdDetails ? (
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             {jdDetails.map((data,index) => (
