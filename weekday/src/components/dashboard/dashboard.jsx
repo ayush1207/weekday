@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './dashboard.module.css';
+import './dashboard.css';
 import JdList from '../jd-list/jd-list';
 import Filter from '../filter/filter';
 
 const Dashboard = () => (
-  <div className={styles.Dashboard}>
+  <div>
     <Filter></Filter>
     <JdList></JdList>
   </div>

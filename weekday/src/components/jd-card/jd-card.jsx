@@ -1,34 +1,62 @@
-import React from 'react';
-import styles from './jd-card.module.css';
+/**
+ * react imports
+ */
+import React, { useState } from 'react';
+/**
+ * material ui imports
+ */
 import { Button } from '@mui/material';
-import { borders } from '@mui/system';
-import Box from '@mui/system/Box';
+/**
+ * style imports
+ */
+import './jd-card.css';
+/**
+ * bootstrap imports
+ */
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-
-
+/**
+ * 
+ */
 const JdCard = ({ cardDetail }) => {
+  const [showMore, setShowMore] = useState(false);
 
   return (
-    <Box component="section" sx={{ p: 2, border: '1px solid grey ',borderRadius: 2 ,whiteSpace: 'normal' ,  }}>
-      {JSON.stringify(cardDetail)}
+    <div className='border rounded-5 p-4'>
+      <Container>
+        <Row>
+          <Col xs={12} md={4}>
+
+          </Col>
+          <Col xs={6} md={8} className="m-0">
+            <p className="m-0 h5">{cardDetail.companyName}</p>
+            <p className="m-0">{cardDetail.jobRole}</p>
+            <p className='m-0'> <small>{cardDetail.location}</small></p>
+          </Col>
+        </Row>
+      </Container>
       <div>
-        <div>{cardDetail.jdLink}</div>
-        <div></div>
+        Estimated Salary : {cardDetail.salaryCurrencyCode ? cardDetail.salaryCurrencyCode + ' ' : 'Rs'}{cardDetail.minJdSalary ? cardDetail.minJdSalary + '-' : ''}{cardDetail.maxJdSalary}
       </div>
       <div>
-        About Company : 
-        About us : 
-        { }
-      </div>
-      <div>
+        <p>About Company :</p>
         <div>
-          <Button variant="contained">Easy Apply</Button>
+          <p>About us :</p>
+          <p className='jobDetailsFade overflow-hidden'>{showMore ? cardDetail.jobDetailsFromCompany : `${cardDetail.jobDetailsFromCompany.substring(0, 250)}`}</p>
         </div>
-        <div>
-          <Button variant="contained">Unlock Refrall Asks</Button>
+        <div className='w-100 text-center'>
+          <button className="btn" onClick={() => setShowMore(!showMore)}>{showMore ? "Show less" : "Show more"}</button>
         </div>
       </div>
-    </Box>
+      <div>
+        Experience : {cardDetail.minExp ? cardDetail.minExp + '-' : ''}{cardDetail.maxExp ?? cardDetail.maxExp}
+      </div>
+      <div>
+        <p className="mt-2"><Button variant="contained" className='w-100'>Easy Apply</Button></p>
+      </div>
+    </div>
   )
 };
 
