@@ -1,28 +1,35 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './jd-card.module.css';
 import { Button } from '@mui/material';
+import { borders } from '@mui/system';
+import Box from '@mui/system/Box';
+
+
 
 const JdCard = ({ cardDetail }) => {
 
   return (
-    <div className={styles.JdCard}>
-      <div className='border rounded-2'>
-        <div class="">
-          <div>{cardDetail.jdLink}</div>
-          <div></div>
-        </div>
-        <div class="">
-          About Company :
-          About us :
-          { }
-        </div>
+    <Box component="section" sx={{ p: 2, border: '1px solid grey ',borderRadius: 2 ,whiteSpace: 'normal' ,  }}>
+      {JSON.stringify(cardDetail)}
+      <div>
+        <div>{cardDetail.jdLink}</div>
+        <div></div>
+      </div>
+      <div>
+        About Company : 
+        About us : 
+        { }
+      </div>
+      <div>
         <div>
           <Button variant="contained">Easy Apply</Button>
+        </div>
+        <div>
           <Button variant="contained">Unlock Refrall Asks</Button>
         </div>
       </div>
-    </div>)
+    </Box>
+  )
 };
 
 export default JdCard;
