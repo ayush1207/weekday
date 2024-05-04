@@ -46,14 +46,14 @@ export const remoteConst = [
 
 
 export const minBasePayConst = [
-    '5L',
-    '10L',
-    '20L',
-    '30L',
-    '40L',
-    '50L',
-    '60L',
-    '70L'
+    '5',
+    '10',
+    '20',
+    '30',
+    '40',
+    '50',
+    '60',
+    '70'
 ];
 
 export const locationConst = [

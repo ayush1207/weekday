@@ -14,44 +14,38 @@ import Autocomplete from '@mui/material/Autocomplete';
 /**
  *
  */
-import { Label, Options, rolesConst, expConst , remoteConst, minBasePayConst, locationConst } from '../../core/constants/filter.constant';
+import { Label, Options, rolesConst, expConst, remoteConst, minBasePayConst, locationConst } from '../../core/constants/filter.constant';
 
 
-const Filter = () => {
-  const [selectedRole, setSelectedRole] = useState(null);
-  const [selectedStack, setSelectedStack] = useState(null);
-  const [selectedBase, setSelectedBase] = useState(null);
-  const [selectedName, setSelectedName] = useState(null);
-  const [selectedRemote, setSelectedRemote] = useState(null);
-  const [selectedLocation, setSelectedLocation] = useState(null);
-  const [selectedExp, setSelectedExp] = useState(null);
+const Filter = ({ onSetSelectedRole, onSetSelectedStack, onSetSelectedBase, onSetSelectedName, onSetSelectedRemote, onSetSelectedLocation, onSetSelectedExp,
+  selectedRole, selectedStack, selectedBase, selectedName, selectedRemote, selectedLocation, selectedExp }) => {
 
   const handleSelectRole = (movie) => {
-    setSelectedRole(movie);
+    onSetSelectedRole(movie);
   };
 
   const handleSelectStack = (movie) => {
-    setSelectedStack(movie);
+    onSetSelectedStack(movie);
   };
 
   const handleSelectBase = (movie) => {
-    setSelectedBase(movie);
+    onSetSelectedBase(movie);
   };
 
   const handleSelectName = (movie) => {
-    setSelectedName(movie);
+    onSetSelectedName(movie);
   };
 
   const handleSelectRemote = (movie) => {
-    setSelectedRemote(movie);
+    onSetSelectedRemote(movie);
   };
 
   const handleSelectLocation = (movie) => {
-    setSelectedLocation(movie);
+    onSetSelectedLocation(movie);
   };
 
   const handleSelectExp = (movie) => {
-    setSelectedExp(movie);
+    onSetSelectedExp(movie);
   };
 
   return (
