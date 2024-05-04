@@ -1,5 +1,5 @@
 const apiService = {
-    async callApi(limit = 10 ,offset = 0 ) {
+    async callApi(limit = 12 ,offset = 0 ) {
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 

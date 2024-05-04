@@ -11,10 +11,14 @@
   }
 
 .minHeight__Card{
-    min-height: 508px;
-    max-height: 508px;
+    min-height: 515px;
+    max-height: 515px;
 }
 
 .maxHeight__detail-company{
     max-height: 200px;   
+}
+
+.logo{
+    max-width: 70px;
 }

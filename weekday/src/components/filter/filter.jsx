@@ -14,14 +14,44 @@ import Autocomplete from '@mui/material/Autocomplete';
 /**
  *
  */
-import { Label , Options } from '../../core/constants/filter.constant';
+import { Label, Options, rolesConst, expConst , remoteConst, minBasePayConst, locationConst } from '../../core/constants/filter.constant';
 
 
 const Filter = () => {
-  const [selectedMovie, setSelectedMovie] = useState(null);
+  const [selectedRole, setSelectedRole] = useState(null);
+  const [selectedStack, setSelectedStack] = useState(null);
+  const [selectedBase, setSelectedBase] = useState(null);
+  const [selectedName, setSelectedName] = useState(null);
+  const [selectedRemote, setSelectedRemote] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+  const [selectedExp, setSelectedExp] = useState(null);
 
-  const handleSelect = (movie) => {
-    setSelectedMovie(movie);
+  const handleSelectRole = (movie) => {
+    setSelectedRole(movie);
+  };
+
+  const handleSelectStack = (movie) => {
+    setSelectedStack(movie);
+  };
+
+  const handleSelectBase = (movie) => {
+    setSelectedBase(movie);
+  };
+
+  const handleSelectName = (movie) => {
+    setSelectedName(movie);
+  };
+
+  const handleSelectRemote = (movie) => {
+    setSelectedRemote(movie);
+  };
+
+  const handleSelectLocation = (movie) => {
+    setSelectedLocation(movie);
+  };
+
+  const handleSelectExp = (movie) => {
+    setSelectedExp(movie);
   };
 
   return (
@@ -30,9 +60,9 @@ const Filter = () => {
         <label>{Label.role}</label>
         <Autocomplete
           disablePortal
-          options={Options}
+          options={rolesConst}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectRole(value)}
           renderInput={(params) => <TextField {...params} label="Select Role" />}
         />
       </div>
@@ -42,7 +72,7 @@ const Filter = () => {
           disablePortal
           options={Options}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectName(value)}
           renderInput={(params) => <TextField {...params} label="Select Name " />}
         />
       </div>
@@ -50,9 +80,9 @@ const Filter = () => {
         <label>{Label.stack}</label>
         <Autocomplete
           disablePortal
-          options={Options}
+          options={rolesConst}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectStack(value)}
           renderInput={(params) => <TextField {...params} label="Select Tech Stack" />}
         />
       </div>
@@ -60,9 +90,9 @@ const Filter = () => {
         <label>{Label.experience}</label>
         <Autocomplete
           disablePortal
-          options={Options}
+          options={expConst}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectExp(value)}
           renderInput={(params) => <TextField {...params} label="Select Exp." />}
         />
       </div>
@@ -70,9 +100,9 @@ const Filter = () => {
         <label>{Label.remote}</label>
         <Autocomplete
           disablePortal
-          options={Options}
+          options={remoteConst}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectRemote(value)}
           renderInput={(params) => <TextField {...params} label="Remote" />}
         />
       </div>
@@ -80,9 +110,9 @@ const Filter = () => {
         <label>{Label.base}</label>
         <Autocomplete
           disablePortal
-          options={Options}
+          options={minBasePayConst}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectBase(value)}
           renderInput={(params) => <TextField {...params} label="Select Base pay" />}
         />
       </div>
@@ -90,9 +120,9 @@ const Filter = () => {
         <label>{Label.location}</label>
         <Autocomplete
           disablePortal
-          options={Options}
+          options={locationConst}
           getOptionLabel={(option) => option}
-          onChange={(event, value) => handleSelect(value)}
+          onChange={(event, value) => handleSelectLocation(value)}
           renderInput={(params) => <TextField {...params} label="Select Location" />}
         />
       </div>
