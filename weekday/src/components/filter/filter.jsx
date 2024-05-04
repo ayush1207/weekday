@@ -12,7 +12,7 @@ import './filter.css';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 /**
- *
+ *constant imports
  */
 import { Label, Options, rolesConst, expConst, remoteConst, minBasePayConst, locationConst } from '../../core/constants/filter.constant';
 

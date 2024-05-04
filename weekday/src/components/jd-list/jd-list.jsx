@@ -1,7 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import styles from './jd-list.module.css';
+/**
+ * react imports
+ */
+import React from 'react';
+/**
+ * design imports
+ */
+import styles from './jd-list.css';
+/**
+ * component imports
+ */
 import JdCard from '../jd-card/jd-card';
-import apiService from '../../core/service/api.service';
 import Grid from '@mui/system/Unstable_Grid';
 import Box from '@mui/system/Box';
 
