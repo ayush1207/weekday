@@ -31,7 +31,9 @@ const Dashboard = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [selectedExp, setSelectedExp] = useState(null);
 
-
+  /**
+   * fetch data from api
+   */
   const fetchData = useCallback(async () => {
     if (isLoading) return;
     setIsLoading(true);
@@ -40,7 +42,7 @@ const Dashboard = () => {
     setIndex((prevIndex) => prevIndex + 1);
     setIsLoading(false);
     showJdConditionally();
-  }, [index, isLoading]);
+  }, [index, isLoading,jdDetails,filteredJdDetails]);
 
 
   useEffect(() => {
@@ -72,7 +74,9 @@ const Dashboard = () => {
     };
   }, [fetchData]);
 
-
+  /**
+   * show the data based on filters
+   */
   const showJdConditionally = useCallback(() => {
     if (!jdDetails) return;
 
