@@ -4,6 +4,12 @@
 
 In the project directory, you can run:
 
+### `git checkout develop`
+Enter the develop branch
+
+### `git pull origin develop`
+Get the latest build
+
 ### `cd weekday`
 Enter the weekday folder
 
