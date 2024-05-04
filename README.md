@@ -4,6 +4,10 @@
 
 In the project directory, you can run:
 
+### cd weekday
+Enter the weekday folder
+
+
 ### `npm start`
 Runs the dependency pipeline
 
